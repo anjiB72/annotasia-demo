@@ -1,0 +1,4 @@
+com/chapter/backend/customannotations/controller/UserController.class
+com/chapter/backend/customannotations/repository/UserJpaRepository.class
+com/chapter/backend/customannotations/CustomannotationsApplication.class
+com/chapter/backend/customannotations/model/User.class
