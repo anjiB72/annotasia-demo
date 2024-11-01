@@ -15,4 +15,8 @@ public @interface ValidateEmail {
 
     String message() default "Invalid email address";
 
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+
 }
