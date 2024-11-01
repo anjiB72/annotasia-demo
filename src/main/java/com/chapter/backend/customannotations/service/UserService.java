@@ -1,5 +1,6 @@
 package com.chapter.backend.customannotations.service;
 
+import com.chapter.backend.customannotations.domain.UserResponse;
 import com.chapter.backend.customannotations.model.User;
 import com.chapter.backend.customannotations.repository.UserJpaRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,9 +16,8 @@ public class UserService {
         return userJpaRepository.save(user);
     }
 
-    public User getUserById(Long id) {
+    public UserResponse getUserById(Long id) {
         User user = userJpaRepository.getReferenceById(id);
-        user.setPassword(null);
-        return user;
+        return new UserResponse(user.getName(), user.getEmail(), user.getPostcode());
     }
 }

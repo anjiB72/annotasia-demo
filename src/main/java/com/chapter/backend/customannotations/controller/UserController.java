@@ -1,5 +1,6 @@
 package com.chapter.backend.customannotations.controller;
 
+import com.chapter.backend.customannotations.domain.UserResponse;
 import com.chapter.backend.customannotations.service.UserService;
 import com.chapter.backend.customannotations.model.User;
 import jakarta.validation.Valid;
@@ -34,8 +35,8 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<User> getUser(@PathVariable String id) {
-        User user = userService.getUserById(Long.parseLong(id));
+    public ResponseEntity<UserResponse> getUser(@PathVariable String id) {
+        UserResponse user = userService.getUserById(Long.parseLong(id));
         return ResponseEntity.ok(user);
     }
 
