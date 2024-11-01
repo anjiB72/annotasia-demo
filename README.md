@@ -18,13 +18,15 @@ Inward code.
 
 The second part of the postcode, which identifies the sector, delivery point, or individual address within the town or district. It's always three characters long and starts with a number. 
 
-
 ### Task 2
 
 Create a new custom annotation that creates logs at the start and end of a method (you can decide what the log should say i.e start time and end time).
 
-
 ### Task 3
+
+Create a custom annoation that provides custom error handling when an exception is thrown
+
+### Task 4
 
 Think about where you might be able to use custom annotations in your services. 
 
