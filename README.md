@@ -25,7 +25,7 @@ Create a new custom annotation that creates logs at the start and end of a save 
 
 ### Task 3
 
-Create a custom annotation that provides custom error handling on the save user method when an exception is thrown
+Create a custom annotation that provides custom error handling on the get user method when a not found exception is thrown
 
 ### Task 4
 
