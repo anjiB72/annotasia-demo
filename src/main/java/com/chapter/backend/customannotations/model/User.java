@@ -30,4 +30,7 @@ public class User {
     @NotNull
     @ValidateEmail
     private String email;
+
+    @NotNull
+    private String postcode;
 }
