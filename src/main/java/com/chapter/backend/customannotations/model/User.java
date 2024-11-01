@@ -28,7 +28,7 @@ public class User {
     private String name;
 
     @NotNull
-    @ValidateEmail
+    @ValidateEmail(message = "Your email address is not valid")
     private String email;
 
     @NotNull
