@@ -1,7 +1,7 @@
 package com.chapter.backend.customannotations.controller;
 
+import com.chapter.backend.customannotations.service.UserService;
 import com.chapter.backend.customannotations.model.User;
-import com.chapter.backend.customannotations.repository.UserJpaRepository;
 import jakarta.validation.Valid;
 import java.net.URI;
 import lombok.RequiredArgsConstructor;
@@ -19,12 +19,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserJpaRepository userJpaRepository;
+    private final UserService userService;
 
     @PostMapping
     public ResponseEntity<Void> createUser(@RequestBody @Valid User user) {
 
-        User newUser = userJpaRepository.save(user);
+        User newUser = userService.saveUser(user);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
             .path("/{id}")
@@ -35,7 +35,7 @@ public class UserController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> getUser(@PathVariable String id) {
-        User user = userJpaRepository.getReferenceById(Long.parseLong(id));
+        User user = userService.getUserById(Long.parseLong(id));
         return ResponseEntity.ok(user);
     }
 

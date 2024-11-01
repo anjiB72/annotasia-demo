@@ -33,4 +33,6 @@ public class User {
 
     @NotNull
     private String postcode;
+
+    private String password;
 }
